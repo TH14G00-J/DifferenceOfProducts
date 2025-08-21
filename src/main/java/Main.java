@@ -1,8 +1,12 @@
+import entities.Product;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        Product product = new Product();
 
         System.out.println("Calculate the difference between products (A*B - C*D):");
 
@@ -18,7 +22,7 @@ public class Main {
         System.out.print("Enter value D: ");
         int d = getValidInt(sc);
 
-        System.out.printf("Difference = %d", (a * b) - (c * d));
+        System.out.printf("Difference = %d", product.getDifferenceBetweenProducts(a, b, c, d));
         sc.close();
     }
 
